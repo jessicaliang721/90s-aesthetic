@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Nunito:wght@400;600;700&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink: #FF2D9B;
+  --yellow: #FFE600;
+  --green: #39FF14;
+  --cyan: #00F5FF;
+  --ink: #1a1a2e;
+  --paper: #f4f0ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  /* put a doodle image background here or a desk?? */
+  background-image: url(../assets/doodle-bg.png);
+}
+
+.container {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  box-shadow: -8px 0 16px rgba(0, 0, 0, 0.1), 8px 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  position: relative;
+  background-color: var(--paper);
+/* Ruled notebook lines */
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 35px,
+    #d3dee9 35px,
+    #d3dee9 36px
+  );
+  background-attachment: local;
+}
+
+/* Red margin line */
+.content-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 72px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(218, 124, 124, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Spiral binding holes */
+.content-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 46px;
+  background-image: url(../assets/spiral.png);
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Main content offset for binding */
+.content-body {
+  margin-left: 72px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Polaroid card style */
+.polaroid {
+  background: white;
+  padding: 12px 12px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Tape strip */
+.tape {
+  position: relative;
+}
+.tape::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 60px;
+  height: 22px;
+  background: rgba(255, 230, 0, 0.6);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+/* Sticker bounce */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-6px) rotate(var(--r, 0deg)); }
+}
+
+.sticker-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Handwritten underline squiggle */
+.squiggle {
+  text-decoration: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' stroke='%23FF2D9B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding-bottom: 6px;
+}
+
+/* Star bullet */
+.star-bullet::before {
+  content: '★ ';
+  color: var(--yellow);
+}
+
+/* Nav link hover doodle underline */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--pink);
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--pink);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: left;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Project card hover */
+.project-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* CRT scanline overlay for header */
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
