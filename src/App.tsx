@@ -4,6 +4,12 @@ import { useState } from 'react'
 // import './App.css'
 // import './styles/globals.css'
 import Home from './pages/Home'
+import Navigation from './components/Navigation'
+// import Footer from './components/Footer'
+// import About from './pages/About'
+// import Work from './pages/Work'
+// import Blog from './pages/Blog'
+// import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -11,7 +17,7 @@ function App() {
       <div className="content-wrapper">
         <div className="content-body">
           <BrowserRouter basename="/90s-aesthetic">
-            {/* <Navbar /> */}
+            <Navigation />
             <Routes>
               <Route path="/" element={<Home />} />
               {/* <Route path="/about" element={<About />} />

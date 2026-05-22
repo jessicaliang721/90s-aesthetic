@@ -1,41 +1,17 @@
-type StickerSectionProps = {
-    sticker1: string,
-    sticker2: string,
-    sticker3: string,
-    sticker4: string
-}
+import Sticker from "./Sticker"
+import HEADPHONES_STICKER from '../assets/headphones.png'
+import PHONE_STICKER from '../assets/pink-cellphone.png'
+import CASSETTE_STICKER from '../assets/purple-mixtape.png'
+import GREEN_STAR_STICKER from '../assets/green-star-sticker.png'
 
-export default function StickerSection({ sticker1, sticker2, sticker3, sticker4 }: StickerSectionProps) {
+export default function StickerSection() {
     return (
         <>
             {/* ── Stickers ── absolute positioned, won't affect layout */}
-            <img
-                src={sticker1}
-                alt=""
-                aria-hidden="true"
-                className="absolute top-6 w-45 rotate-[8deg] sticker-float drop-shadow-lg"
-            />
-            <img
-                src={sticker2}
-                alt=""
-                aria-hidden="true"
-                className="absolute top-1/3 right-15 w-50 -rotate-6 sticker-float drop-shadow-lg"
-                style={{ animationDelay: '0.5s' }}
-            />
-            <img
-                src={sticker3}
-                alt=""
-                aria-hidden="true"
-                className="absolute bottom-1 right-25 w-50 rotate-[4deg] sticker-float drop-shadow-lg"
-                style={{ animationDelay: '1s' }}
-            />
-            <img
-                src={sticker4}
-                alt=""
-                aria-hidden="true"
-                className="absolute top-2/5 right-60 w-20 rotate-[4deg] drop-shadow-lg sticker-float"
-                style={{ animationDelay: '1.5s' }}
-            />
+            <Sticker imageSrc={HEADPHONES_STICKER} float={true} customClasses="absolute top-6 w-45 rotate-[8deg]" />
+            <Sticker imageSrc={PHONE_STICKER} float={true} customClasses="absolute top-1/3 right-15 w-50 -rotate-6" animationDelay={0.5} />
+            <Sticker imageSrc={CASSETTE_STICKER} float={true} customClasses="absolute bottom-1 right-25 w-50 rotate-[4deg]" animationDelay={1} />
+            <Sticker imageSrc={GREEN_STAR_STICKER} float={true} customClasses="absolute top-2/5 right-60 w-20 rotate-[4deg]  rotate-[4deg]" animationDelay={1.5} />
 
             {/* ── Doodle SVGs ── stars, hearts, squiggles */}
             <span className="absolute top-20 right-[5%] text-retro-lilac text-5xl opacity-70 rotate-15">✦</span>

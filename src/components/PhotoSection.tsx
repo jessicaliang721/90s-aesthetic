@@ -1,31 +1,25 @@
+import Sticker from './Sticker'
+
 import TAPE_SRC from '../assets/pink-tape-small.png'
 import BG_IMG from '../assets/yellow-scrap-paper.png'
+import PHOTO_URL from '../assets/IMG_5201.jpg'
+import GREEN_SMILEY from '../assets/green-smiley-sticker.png'
+import PINK_HEART from '../assets/pink-heart-sticker.png'
 
-type PhotoSectionProps = {
-    profPic: string,
-    stickerTop: string,
-    stickerBottom: string
-}
-
-export default function PhotoSection({ profPic, stickerTop, stickerBottom }: PhotoSectionProps) {
+export default function PhotoSection() {
     return (
         <div className="relative w-fit py-8">
             {/* Yellow paper — rendered first so it sits behind everything */}
-            <div className="absolute top-5 -left-5 w-75 h-110 bg-yellow-200 rotate-[-5deg] -z-10 drop-shadow-lg" style={{ backgroundImage: `url(${BG_IMG})` }} />
+            <div className="absolute top-5 -left-5 w-75 h-110 rotate-[-5deg] -z-10 drop-shadow-lg" style={{ backgroundImage: `url(${BG_IMG})` }} />
 
             {/* Tape */}
-            <img
-                src={TAPE_SRC}
-                alt=""
-                aria-hidden="true"
-                className="absolute top-2 left-1/2 -translate-x-2/3 z-10 w-55 h-12 -rotate-15 object-cover drop-shadow-lg"
-            />
+            <Sticker imageSrc={TAPE_SRC} float={false} customClasses="absolute top-2 left-1/2 -translate-x-2/3 z-10 w-55 h-12 -rotate-15 object-cover" />
 
             <div className="relative inline-block">
                 {/* Polaroid frame */}
                 <div className="bg-white p-3 pb-10 shadow-polaroid rotate-[-10deg] drop-shadow-lg">
                     <img
-                        src={profPic}
+                        src={PHOTO_URL}
                         alt="hi, I'm jessica!"
                         className="w-64 h-80 object-cover object-top"
                     />
@@ -35,14 +29,9 @@ export default function PhotoSection({ profPic, stickerTop, stickerBottom }: Pho
                     </p>
                 </div>
 
+                <Sticker imageSrc={PINK_HEART} float={false} customClasses="absolute top-4 -right-8 rotate-[-10deg] drop-shadow-lg w-24 h-24" />
 
-                <span className="absolute top-4 -right-8 rotate-[-10deg]">
-                    <img src={stickerTop} alt="" className="w-24 h-24 object-cover drop-shadow-lg" />
-                </span>
-
-                <span className="absolute -bottom-10 -left-8">
-                    <img src={stickerBottom} alt="" className="w-30 h-30 object-cover drop-shadow-lg" />
-                </span>
+                <Sticker imageSrc={GREEN_SMILEY} float={false} customClasses="absolute -bottom-10 -left-8 rotate-[-10deg] drop-shadow-lg w-30 h-30" />
             </div>
         </div>
     )
