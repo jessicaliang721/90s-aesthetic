@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Nunito:wght@400;600;700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cutive+Mono&family=Indie+Flower&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-neon-pink: #FF2D9B;
+  --color-neon-yellow: #FFE600;
+  --color-retro-pink: #FFB3D9;
+  --color-retro-lilac: #D4B3FF;
+  --color-ink: #1a1a2e;
+  --color-paper: #FEFAF0;
+
+  --font-display: "Chewy", cursive;
+  --font-handwrite: "Indie Flower", cursive;
+  --font-body: "Jost", sans-serif;
+  --font-mono: "Cutive Mono", monospace;
+}
 
 :root {
   --pink: #FF2D9B;
@@ -34,6 +45,7 @@ body {
   max-width: 96rem;
   margin: 0 auto;
   box-shadow: -8px 0 16px rgba(0, 0, 0, 0.1), 8px 0 16px rgba(0, 0, 0, 0.1);
+  height: 100vh;
 }
 
 .content-wrapper {
