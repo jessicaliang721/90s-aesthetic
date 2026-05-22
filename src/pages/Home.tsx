@@ -13,13 +13,13 @@ export default function Home() {
     <main className="">
 
       {/* ── About Section ─────────────────────────────────── */}
-      <section id="about" className="flex flex-col md:flex-row">
-        <div className="flex-1 lg:flex-2 flex justify-center">
-          <PhotoSection profPic={PHOTO_URL} stickerBottom={PINK_HEART
-          } stickerTop={GREEN_SMILEY} />
+      <section id="about" className="flex flex-col lg:flex-row">
+        <div className="flex-1 xl:flex-1 flex justify-center items-center">
+          <PhotoSection profPic={PHOTO_URL} stickerBottom={GREEN_SMILEY
+          } stickerTop={PINK_HEART} />
         </div>
-        <div className="flex-1 lg:flex-2"><AboutSection skills={skills} /></div>
-        <div className="bg-retro-lilac hidden lg:flex-1 lg:inline-flex">03</div>
+        <div className="flex-1 xl:flex-2"><AboutSection skills={skills} /></div>
+        <div className="bg-retro-lilac hidden xl:flex-1 xl:inline-flex">03</div>
       </section>
 
       {/* ── Washi divider ─────────────────────────────────── */}

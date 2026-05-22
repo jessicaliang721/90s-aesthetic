@@ -21,28 +21,29 @@ export default function PhotoSection({ profPic, stickerTop, stickerBottom }: Pho
                 className="absolute top-2 left-1/2 -translate-x-3/4 z-10 w-35 h-20 -rotate-25 object-cover"
             />
 
-            {/* Polaroid frame */}
-            <div className="bg-white p-3 pb-10 shadow-polaroid rotate-[-10deg] shadow-xl shadow-black/10">
-                <img
-                    src={profPic}
-                    alt="hi, I'm jessica!"
-                    className="w-64 h-80 object-cover object-top"
-                />
-                {/* Caption inside polaroid */}
-                <p className="font-handwrite text-center text-ink mt-2 text-2xl">
-                    hi, I'm jessica!
-                </p>
+            <div className="relative inline-block">
+                {/* Polaroid frame */}
+                <div className="bg-white p-3 pb-10 shadow-polaroid rotate-[-10deg] shadow-xl shadow-black/10">
+                    <img
+                        src={profPic}
+                        alt="hi, I'm jessica!"
+                        className="w-64 h-80 object-cover object-top"
+                    />
+                    {/* Caption inside polaroid */}
+                    <p className="font-handwrite text-center text-ink mt-2 text-2xl font-semibold tracking-wider">
+                        hi, I'm jessica!
+                    </p>
+                </div>
+
+
+                <span className="absolute top-4 -right-8 rotate-[-10deg]">
+                    <img src={stickerTop} alt="" className="w-24 h-24 object-cover drop-shadow-lg" />
+                </span>
+
+                <span className="absolute -bottom-10 -left-8">
+                    <img src={stickerBottom} alt="" className="w-30 h-30 object-cover drop-shadow-lg" />
+                </span>
             </div>
-
-            {/* Heart doodle — outside frame, bottom left */}
-            <span className="absolute top-30 -left-15 text-2xl">
-                <img src={stickerBottom} alt="" className="w-24 h-24 object-cover drop-shadow-lg" />
-            </span>
-
-            {/* Smiley sticker — outside frame, bottom left lower */}
-            <span className="absolute -bottom-8 -left-10 text-3xl rotate-[-10deg]">
-                <img src={stickerTop} alt="" className="w-30 h-30 object-cover drop-shadow-lg" />
-            </span>
         </div>
     )
 }

@@ -2,10 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-neon-pink: #FF2D9B;
-  --color-neon-yellow: #FFE600;
+  --color-neon-pink: #f268a9;
+  --color-neon-yellow: #f7db5b;
   --color-retro-pink: #FFB3D9;
   --color-retro-lilac: #D4B3FF;
+  --color-retro-green: #a0bf58;
   --color-ink: #1a1a2e;
   --color-paper: #FEFAF0;
 
@@ -35,8 +36,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: 'Nunito', sans-serif;
-  /* put a doodle image background here or a desk?? */
+  font-family: 'Jost', sans-serif;
   background-image: url(../assets/doodle-bg.png);
 }
 
@@ -131,16 +131,55 @@ body {
 /* Handwritten underline squiggle */
 .squiggle {
   text-decoration: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' stroke='%23FF2D9B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-position: bottom;
   padding-bottom: 6px;
 }
 
+.squiggle-pink {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' stroke='%23f268a9' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+}
+
+.squiggle-lilac {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' stroke='%23D4B3FF' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+}
+
+.squiggle-green {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cpath d='M0 3 Q5 0 10 3 Q15 6 20 3' stroke='%23a0bf58' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+}
+
+/* Text highlight */
+.highlight {
+  display: inline-block;
+  background: rgba(255, 233, 39, 0.45);
+  border-radius: 0.35rem;
+  padding: 0.125rem 0.35rem;
+}
+
+.highlight-pink {
+  background: rgba(242, 104, 169, 0.25);
+}
+
+.highlight-green {
+  background: rgba(160, 191, 88, 0.25);
+}
+
 /* Star bullet */
 .star-bullet::before {
   content: '★ ';
-  color: var(--yellow);
+  color: currentColor;
+}
+
+.bullet-pink::before {
+  color: var(--color-neon-pink);
+}
+
+.bullet-yellow::before {
+  color: var(--color-neon-yellow);
+}
+
+.bullet-green::before {
+  color: var(--color-retro-green);
 }
 
 /* Nav link hover doodle underline */

@@ -29,10 +29,9 @@ export const projects = [
 ]
 
 export const skills = [
-  'HTML, CSS, JavaScript',
-  'React, Tailwind CSS',
-  'Responsive Design',
-  'UI/UX Enthusiast',
+  'JavaScript (ES6+), React, TypeScript',
+  'Figma, Storybook, Tailwind CSS',
+  'Jest, React Testing Library',
 ]
 
 export const socials = [
