@@ -11,19 +11,19 @@ export default function PhotoSection({ profPic, stickerTop, stickerBottom }: Pho
     return (
         <div className="relative w-fit py-8">
             {/* Yellow paper — rendered first so it sits behind everything */}
-            <div className="absolute top-5 -left-5 w-75 h-110 bg-yellow-200 rotate-[-5deg] -z-10 shadow-xl shadow-black/20" style={{ backgroundImage: `url(${BG_IMG})` }} />
+            <div className="absolute top-5 -left-5 w-75 h-110 bg-yellow-200 rotate-[-5deg] -z-10 drop-shadow-lg" style={{ backgroundImage: `url(${BG_IMG})` }} />
 
             {/* Tape */}
             <img
                 src={TAPE_SRC}
                 alt=""
                 aria-hidden="true"
-                className="absolute top-2 left-1/2 -translate-x-3/4 z-10 w-35 h-20 -rotate-25 object-cover"
+                className="absolute top-2 left-1/2 -translate-x-2/3 z-10 w-55 h-12 -rotate-15 object-cover drop-shadow-lg"
             />
 
             <div className="relative inline-block">
                 {/* Polaroid frame */}
-                <div className="bg-white p-3 pb-10 shadow-polaroid rotate-[-10deg] shadow-xl shadow-black/10">
+                <div className="bg-white p-3 pb-10 shadow-polaroid rotate-[-10deg] drop-shadow-lg">
                     <img
                         src={profPic}
                         alt="hi, I'm jessica!"

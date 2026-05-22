@@ -16,7 +16,7 @@ const AboutSection = ({ skills }: AboutSectionProps) => {
             </p>
 
             {/* Skills list */}
-            <div className="w-fit border-2 border-retro-pink rounded-lg p-4 border-dashed">
+            <div className="w-fit border-4 border-retro-pink rounded-lg p-4 border-dashed">
                 <h3 className="text-center text-xl tracking-wider hand-underline hand-underline-lilac mb-6">Top Skills</h3>
                 <ul className="space-y-1">
                     {skills.map((skill, index) => (
