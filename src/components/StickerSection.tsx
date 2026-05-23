@@ -8,9 +8,9 @@ export default function StickerSection() {
     return (
         <>
             {/* ── Stickers ── absolute positioned, won't affect layout */}
-            <Sticker imageSrc={HEADPHONES_STICKER} float={true} customClasses="absolute top-6 w-45 rotate-[8deg]" />
+            <Sticker imageSrc={HEADPHONES_STICKER} float={true} customClasses="absolute top-15 w-45 rotate-[8deg]" />
             <Sticker imageSrc={PHONE_STICKER} float={true} customClasses="absolute top-1/3 right-15 w-50 -rotate-6" animationDelay={0.5} />
-            <Sticker imageSrc={CASSETTE_STICKER} float={true} customClasses="absolute bottom-1 right-25 w-50 rotate-[4deg]" animationDelay={1} />
+            <Sticker imageSrc={CASSETTE_STICKER} float={true} customClasses="absolute bottom-8 right-25 w-50 rotate-[4deg]" animationDelay={1} />
             <Sticker imageSrc={GREEN_STAR_STICKER} float={true} customClasses="absolute top-2/5 right-60 w-20 rotate-[4deg]  rotate-[4deg]" animationDelay={1.5} />
 
             {/* ── Doodle SVGs ── stars, hearts, squiggles */}

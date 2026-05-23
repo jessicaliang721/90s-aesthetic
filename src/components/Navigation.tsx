@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
+import Logo from './Logo'
 import MobileNav from './MobileNav'
-// import Navbar from './Navbar'
-import LOGO from '../assets/jess-dev-logo.png'
+import Navbar from './Navbar'
 import Sticker from './Sticker'
 import GREEN_STAR_STICKER from '../assets/doodles-stickers/green-star-sticker.png'
 
@@ -32,12 +31,7 @@ export default function Navigation() {
                     >
                         {mobileOpen ? '✕' : '☰'}
                     </button>
-                    <Link to="/"
-                        className="absolute left-1/2 -translate-x-1/2 z-50 transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                        onClick={() => setMobileOpen(false)}
-                    >
-                        <img src={LOGO} alt="Jessica Liang logo" className="w-s drop-shadow-lg" />
-                    </Link>
+                    <Logo customClasses="absolute left-1/2 -translate-x-1/2 z-50" onClick={() => setMobileOpen(false)} />
                     <Sticker imageSrc={GREEN_STAR_STICKER} float={false} customClasses="rotate-[-10deg] drop-shadow-lg w-15 z-50 pr-3"/>
                 </div>
 
@@ -50,9 +44,9 @@ export default function Navigation() {
             </div>
 
             {/* Desktop navbar — hidden below md */}
-            {/* <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <Navbar />
-            </div> */}
+            </div>
         </>
     )
 }

@@ -252,38 +252,6 @@ body {
   color: var(--color-retro-green);
 }
 
-/* Nav link hover doodle underline */
-.nav-link {
-  position: relative;
-  text-decoration: none;
-  font-family: 'Caveat', cursive;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--ink);
-  transition: color 0.2s;
-}
-
-.nav-link:hover {
-  color: var(--pink);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--pink);
-  transform: scaleX(0);
-  transition: transform 0.2s ease;
-  transform-origin: left;
-}
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-
 /* Project card hover */
 .project-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -303,4 +271,51 @@ body {
   100% {
     background-position: 0 100%;
   }
+}
+
+@layer components {
+  .note-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 100%;
+    aspect-ratio: 446 / 180;
+    max-width: 446px;
+  }
+
+  .mobile-nav {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/backgrounds/doodle-bg-on-paper.png');
+    background-size: cover;
+    background-repeat: "no-repeat";
+    opacity: 1;
+  }
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-neon-pink);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
 }

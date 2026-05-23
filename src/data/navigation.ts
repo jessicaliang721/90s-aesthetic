@@ -14,7 +14,7 @@ import MASKING_TAPE from '../assets/doodles-stickers/masking-tape.png'
 
 export const navItems = [
     {
-        label: 'ABOUT',
+        label: 'About',
         href: "/about",
         bg: GREEN_PAPER,
         leftIcon: PINK_HEART_DOODLE,
@@ -26,7 +26,7 @@ export const navItems = [
         tape: MASKING_TAPE
     },
     {
-        label: 'WORK',
+        label: 'Work',
         href: "/work",
         bg: BEIGE_PAPER,
         leftIcon: GOLD_STAR_STICKER,
@@ -37,19 +37,18 @@ export const navItems = [
         customClassesRight: 'w-6 ml-10'
     },
     {
-        label: 'EXPERIENCE',
+        label: 'Experience',
         href: "/experience",
         bg: PINK_GRID_PAPER,
         leftIcon: PURPLE_PAPERCLIP,
         rightIcon: GREEN_STAR_DOODLE,
-        deco: '✦',
         rotate: '-0.5deg',
         underlineColor: 'lilac',
         customClassesLeft: "w-7 mr-8 -rotate-9",
         customClassesRight: 'w-10 ml-6 mt-8'
     },
     {
-        label: 'CONTACT',
+        label: 'Contact',
         href: "/contact",
         bg: PURPLE_PAPER,
         leftIcon: ENVELOPE_STICKER,

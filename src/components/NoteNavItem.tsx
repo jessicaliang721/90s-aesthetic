@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import "./NoteNavItem.css"
 import Sticker from './Sticker';
 
 interface NoteNavItemProps {
@@ -8,7 +7,6 @@ interface NoteNavItemProps {
         bg: string;
         leftIcon: string;
         rightIcon: string;
-        deco: string;
         rotate: string;
         underlineColor: string;
         href: string;
