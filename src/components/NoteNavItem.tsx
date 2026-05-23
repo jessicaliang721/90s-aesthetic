@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import "./NoteNavItem.css"
+import Sticker from './Sticker';
 
 interface NoteNavItemProps {
     item: {
@@ -11,6 +12,9 @@ interface NoteNavItemProps {
         rotate: string;
         underlineColor: string;
         href: string;
+        customClassesLeft?: string;
+        customClassesRight?: string;
+        tape?: string;
     };
     onClick: () => void;
 }
@@ -23,7 +27,10 @@ export const NoteNavItem = ({ item, onClick }: NoteNavItemProps) => {
         rightIcon,
         rotate,
         underlineColor,
-        href
+        href,
+        customClassesLeft,
+        customClassesRight,
+        tape
     } = item;
 
     return (
@@ -37,14 +44,23 @@ export const NoteNavItem = ({ item, onClick }: NoteNavItemProps) => {
             }}
             onClick={onClick}
         >
-            <span className="text-3xl mr-3">{leftIcon}</span>
+
+             {/* Tape — layered on top, positioned top right */}
+            {tape && (
+                <Sticker
+                    imageSrc={tape}
+                    customClasses="absolute top-4 left-4 w-26 rotate-[-20deg] z-10 pointer-events-none"
+                    />
+            )}
+
+            <Sticker imageSrc={leftIcon} float={false} customClasses={customClassesLeft} />
 
             {/* Label with underline */}
             <span className={`font-display tracking-widest text-3xl text-ink relative hand-underline hand-underline-${underlineColor}`}>
                 {label}
             </span>
 
-            <span className="text-3xl ml-3">{rightIcon}</span>
+            <Sticker imageSrc={rightIcon} float={false} customClasses={customClassesRight} />
         </Link>
     )
 }

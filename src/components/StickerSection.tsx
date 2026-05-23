@@ -1,8 +1,8 @@
 import Sticker from "./Sticker"
-import HEADPHONES_STICKER from '../assets/headphones.png'
-import PHONE_STICKER from '../assets/pink-cellphone.png'
-import CASSETTE_STICKER from '../assets/purple-mixtape.png'
-import GREEN_STAR_STICKER from '../assets/green-star-sticker.png'
+import HEADPHONES_STICKER from '../assets/doodles-stickers/headphones.png'
+import PHONE_STICKER from '../assets/doodles-stickers/pink-cellphone.png'
+import CASSETTE_STICKER from '../assets/doodles-stickers/purple-mixtape.png'
+import GREEN_STAR_STICKER from '../assets/doodles-stickers/green-star-sticker.png'
 
 export default function StickerSection() {
     return (

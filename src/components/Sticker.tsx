@@ -1,7 +1,7 @@
 type StickerProps = {
     imageSrc: string;
     altText?: string;
-    customClasses: string;
+    customClasses?: string;
     animationDelay?: number;
     float?: boolean; // if true, won't apply floating animation
 };

@@ -7,7 +7,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('../assets/doodle-bg-on-paper.png');
+    background-image: url('../assets/backgrounds/doodle-bg-on-paper.png');
     background-size: cover;
     background-repeat: "no-repeat";
     /* background-position: center; */

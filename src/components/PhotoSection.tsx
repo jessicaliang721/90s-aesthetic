@@ -1,10 +1,10 @@
 import Sticker from './Sticker'
 
-import TAPE_SRC from '../assets/pink-tape-small.png'
-import BG_IMG from '../assets/yellow-scrap-paper.png'
+import TAPE_SRC from '../assets/doodles-stickers/pink-tape-small.png'
+import BG_IMG from '../assets/backgrounds/yellow-scrap-paper.png'
 import PHOTO_URL from '../assets/IMG_5201.jpg'
-import GREEN_SMILEY from '../assets/green-smiley-sticker.png'
-import PINK_HEART from '../assets/pink-heart-sticker.png'
+import GREEN_SMILEY from '../assets/doodles-stickers/green-smiley-sticker.png'
+import PINK_HEART from '../assets/doodles-stickers/pink-heart-sticker.png'
 
 export default function PhotoSection() {
     return (

@@ -49,7 +49,7 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: 'Jost', sans-serif;
-  background-image: url(../assets/doodle-bg.png);
+  background-image: url(../assets/backgrounds/doodle-bg.png);
 }
 
 .container {

@@ -5,8 +5,7 @@ import MobileNav from './MobileNav'
 // import Navbar from './Navbar'
 import LOGO from '../assets/jess-dev-logo.png'
 import Sticker from './Sticker'
-import GREEN_SMILEY from '../assets/green-smiley-sticker.png'
-import GREEN_STAR_STICKER from '../assets/green-star-sticker.png'
+import GREEN_STAR_STICKER from '../assets/doodles-stickers/green-star-sticker.png'
 
 export default function Navigation() {
     const [mobileOpen, setMobileOpen] = useState(false)
