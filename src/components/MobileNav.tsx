@@ -1,9 +1,21 @@
+import { navItems } from "../data/navigation"
+import { NoteNavItem } from "./NoteNavItem"
+import './MobileNav.css' // Import the CSS file for MobileNav
+
 export default function MobileNav({ onClose }: { onClose: () => void }) {
     return (
-        <nav className="bg-retro-pink h-full w-full flex flex-col items-center justify-center space-y-8 text-2xl font-bold text-white">
-            <a href="#about" onClick={onClose}>About</a>
-            <a href="#work" onClick={onClose}>Work</a>
-            <a href="#fun" onClick={onClose}>Fun</a>
+        <nav
+            className="h-full w-full flex flex-col items-center justify-center space-y-2 text-2xl font-bold mobile-nav"
+        >
+            {/* {navItems.map(({ label, bg, icon, deco, rotate, tape, ruled, clip }) => (
+                <a key={label} href={`#${label.toLowerCase()}`} onClick={onClose}>
+                    {icon} {label}
+                </a>
+            ))} */}
+
+            {navItems.map((item) => (
+                NoteNavItem({ item, onClick: onClose })
+            ))}
         </nav>
     )
 }

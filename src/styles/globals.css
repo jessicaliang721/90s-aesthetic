@@ -93,7 +93,6 @@ body {
   bottom: 0;
   width: 46px;
   background-image: url(../assets/spiral.png);
-  z-index: 50;
   pointer-events: none;
 }
 

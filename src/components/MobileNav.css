@@ -1,0 +1,15 @@
+.mobile-nav {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/doodle-bg-on-paper.png');
+    background-size: cover;
+    background-repeat: "no-repeat";
+    /* background-position: center; */
+    opacity: 1;
+}
