@@ -6,6 +6,7 @@ import PURPLE_PAPER from '../assets/purple-paper.png'
 export const navItems = [
     {
         label: 'ABOUT',
+        href: "/about",
         bg: GREEN_PAPER,
         leftIcon: '🩷',
         rightIcon: '✦',
@@ -15,6 +16,7 @@ export const navItems = [
     },
     {
         label: 'WORK',
+        href: "/work",
         bg: BEIGE_PAPER,
         leftIcon: '⭐',
         rightIcon: '✦',
@@ -24,6 +26,7 @@ export const navItems = [
     },
     {
         label: 'EXPERIENCE',
+        href: "/experience",
         bg: PINK_GRID_PAPER,
         leftIcon: '📎',
         rightIcon: '✦',
@@ -33,6 +36,7 @@ export const navItems = [
     },
     {
         label: 'CONTACT',
+        href: "/contact",
         bg: PURPLE_PAPER,
         leftIcon: '✉️',
         rightIcon: '✦',

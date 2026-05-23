@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import "./NoteNavItem.css"
 
 interface NoteNavItemProps {
@@ -8,27 +9,28 @@ interface NoteNavItemProps {
         rightIcon: string;
         deco: string;
         rotate: string;
-        tape?: boolean;
-        ruled?: boolean;
-        clip?: boolean;
         underlineColor: string;
+        href: string;
     };
     onClick: () => void;
 }
 
 export const NoteNavItem = ({ item, onClick }: NoteNavItemProps) => {
-    const { 
-        label, 
-        bg, 
-        leftIcon, 
+    const {
+        label,
+        bg,
+        leftIcon,
         rightIcon,
-        rotate,  
-        underlineColor 
+        rotate,
+        underlineColor,
+        href
     } = item;
+
     return (
-        <div
+        <Link
+            to={href}
             key={label}
-            className="relative flex items-center justify-center min-h-20 cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.98] note-item drop-shadow-lg"
+            className="relative flex items-center justify-center min-h-20 transition-transform hover:scale-[1.02] active:scale-[0.98] note-item drop-shadow-lg"
             style={{
                 backgroundImage: `url(${bg})`,
                 transform: `rotate(${rotate})`
@@ -43,6 +45,6 @@ export const NoteNavItem = ({ item, onClick }: NoteNavItemProps) => {
             </span>
 
             <span className="text-3xl ml-3">{rightIcon}</span>
-        </div>
+        </Link>
     )
 }

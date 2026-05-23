@@ -6,10 +6,10 @@ import { useState } from 'react'
 import Home from './pages/Home'
 import Navigation from './components/Navigation'
 // import Footer from './components/Footer'
-// import About from './pages/About'
-// import Work from './pages/Work'
-// import Blog from './pages/Blog'
-// import Contact from './pages/Contact'
+import About from './pages/About'
+import Work from './pages/Work'
+import Experience from './pages/Experience'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -20,10 +20,10 @@ function App() {
             <Navigation />
             <Routes>
               <Route path="/" element={<Home />} />
-              {/* <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About />} />
               <Route path="/work" element={<Work />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/contact" element={<Contact />} /> */}
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
             {/* <Footer /> */}
           </BrowserRouter>
