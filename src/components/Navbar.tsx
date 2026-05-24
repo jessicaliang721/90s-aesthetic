@@ -18,7 +18,7 @@ export default function Navbar() {
               )}
               <Link
                 to={item.href}
-                className={`nav-link hand-underline hand-underline-yellow`}
+                className={`nav-link hand-underline hand-underline-yellow hand-underline-link`}
               >
                 {item.label}
               </Link>

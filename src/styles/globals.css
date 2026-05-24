@@ -251,6 +251,16 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q50 1 100 7' stroke='%23a0bf58' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
+.hand-underline-link::after {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hand-underline-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
 /* Star bullet */
 .star-bullet::before {
   content: '★ ';
@@ -272,12 +282,12 @@ body {
 /* Project card hover */
 .project-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-      background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    width: 100%;
-    max-width: 480px;
-    aspect-ratio: 469 / 434;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: auto;
+  aspect-ratio: 469 / 434;
+  flex-shrink: 0;
 }
 
 .project-card:hover {
@@ -328,16 +338,6 @@ body {
   transition: color 0.2s;
 }
 
-.nav-link::after {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
 .nav-link:hover {
-  color: var(--color-neon-pink);
-}
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-  opacity: 1;
+  color: var(--pink);
 }

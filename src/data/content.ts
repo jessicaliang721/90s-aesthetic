@@ -7,7 +7,7 @@ export const projects = [
   {
     id: 1,
     title: 'good energy club',
-    description: 'E-commerce landing page for a lifestyle brand.',
+    description: 'E-commerce landing page for a lifestyle brand. More details about this project go here. This is just placeholder text to show how the description will look when it’s a bit longer.',
     tags: ['React', 'Tailwind', 'Stripe'],
     bgColor: '#FFB3D9',
     accentColor: '#FF2D9B',
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'plan it.',
+    title: 'plan it. adding a longer name to see how it looks. how long can it be?',
     description: 'Task management app built with React.',
     tags: ['React', 'TypeScript', 'Zustand'],
     bgColor: '#D4FFE0',

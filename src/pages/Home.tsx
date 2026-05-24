@@ -4,6 +4,7 @@ import PhotoSection from '../components/PhotoSection'
 import AboutSection from '../components/AboutSection'
 import StickerSection from '../components/StickerSection'
 import PINK_WASHI_LONG from '../assets/doodles-stickers/pink-washi-long.png'
+import { Button } from '../components/Button'
 
 export default function Home() {
   return (
@@ -35,10 +36,14 @@ export default function Home() {
           <h2 className="header-highlight header-highlight-pink tracking-wider hand-underline hand-underline-yellow text-3xl mb-6 rotate-2">featured work</h2>
         </div>
 
-        <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto p-4">
+        <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto pt-4">
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
+        </div>
+
+        <div className="flex justify-center my-4">
+          <Button label="view all projects →" onClick={() => alert('This will link to the full projects page!')} />
         </div>
       </section>
 
