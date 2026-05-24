@@ -26,7 +26,7 @@ export default function Navigation() {
                 <div className="relative flex items-center justify-between">
                     {/* Mobile hamburger button */}
                     <button
-                        className="z-50 font-handwrite text-4xl text-ink pl-3"
+                        className="z-50 font-handwrite text-4xl text-ink pl-6"
                         onClick={() => setMobileOpen(!mobileOpen)}
                     >
                         {mobileOpen ? '✕' : '☰'}

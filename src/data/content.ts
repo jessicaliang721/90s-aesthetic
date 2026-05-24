@@ -1,3 +1,8 @@
+import PINK_NOTE_PAPER from '../assets/backgrounds/pink-note-paper.png'
+import YELLOW_NOTE_PAPER from '../assets/backgrounds/yellow-note-paper.png'
+import GREEN_NOTE_PAPER from '../assets/backgrounds/green-note-paper.png'
+import PLACEHOLDER_SCREENSHOT from '../assets/placeholder-ss.png'
+
 export const projects = [
   {
     id: 1,
@@ -7,6 +12,8 @@ export const projects = [
     bgColor: '#FFB3D9',
     accentColor: '#FF2D9B',
     href: '#',
+    bg: PINK_NOTE_PAPER,
+    screenshot: PLACEHOLDER_SCREENSHOT,
   },
   {
     id: 2,
@@ -16,6 +23,8 @@ export const projects = [
     bgColor: '#FFD4B3',
     accentColor: '#FF6B35',
     href: '#',
+    bg: YELLOW_NOTE_PAPER,
+    screenshot: PLACEHOLDER_SCREENSHOT,
   },
   {
     id: 3,
@@ -25,6 +34,8 @@ export const projects = [
     bgColor: '#D4FFE0',
     accentColor: '#00C853',
     href: '#',
+    bg: GREEN_NOTE_PAPER,
+    screenshot: PLACEHOLDER_SCREENSHOT,
   },
 ]
 

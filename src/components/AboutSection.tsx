@@ -7,7 +7,7 @@ const AboutSection = ({ skills }: AboutSectionProps) => {
 
     return (
         <div className="space-y-4 p-4 lg:pl-0 xl:pl-8 text-xl">
-            <h2 className="header-highlight tracking-wider hand-underline hand-underline-pink text-3xl mb-6">about me</h2>
+            <h2 className="header-highlight header-highlight-green tracking-wider hand-underline hand-underline-pink text-3xl mb-6 -rotate-3">about me ♡</h2>
             <p className="font-mono text-ink leading-relaxed">
                 Hi! I'm <span className="highlight">Jessica</span> - a frontend developer who loves building clean, thoughtful, and functional user experiences with a touch of personality. As a proud 90's kid, I’m drawn to cozy nostalgia and enjoy sprinkling my own creative flavor into the things I make (this website included 😉).
             </p>

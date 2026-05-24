@@ -35,7 +35,7 @@ export const NoteNavItem = ({ item, onClick }: NoteNavItemProps) => {
         <Link
             to={href}
             key={label}
-            className="relative flex items-center justify-center min-h-20 transition-transform hover:scale-[1.02] active:scale-[0.98] note-item drop-shadow-lg"
+            className="flex items-center justify-center min-h-20 transition-transform hover:scale-[1.02] active:scale-[0.98] note-item drop-shadow-lg"
             style={{
                 backgroundImage: `url(${bg})`,
                 transform: `rotate(${rotate})`

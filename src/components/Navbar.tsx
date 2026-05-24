@@ -1,10 +1,8 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { navItems } from "../data/navigation"
 import Logo from './Logo'
 
 export default function Navbar() {
-  const location = useLocation()
-
   return (
     <header className="sticky top-0 z-40 px-6 py-3">
       <nav className="mx-auto flex items-center justify-between">
