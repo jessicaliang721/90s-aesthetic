@@ -170,7 +170,7 @@ body {
 }
 
 /* Text highlight */
-.highlight {
+.highlight-yellow {
   background: rgba(255, 233, 39, 0.45);
   border-radius: 0.35rem;
   padding: 0.125rem 0.35rem;
@@ -178,10 +178,14 @@ body {
 
 .highlight-pink {
   background: rgba(242, 104, 169, 0.25);
+  border-radius: 0.35rem;
+  padding: 0.125rem 0.35rem;
 }
 
 .highlight-green {
   background: rgba(160, 191, 88, 0.25);
+  border-radius: 0.35rem;
+  padding: 0.125rem 0.35rem;
 }
 
 /* H1 */
