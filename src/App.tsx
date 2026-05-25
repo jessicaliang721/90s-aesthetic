@@ -1,8 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
 
-// import './App.css'
-// import './styles/globals.css'
 import Home from './pages/Home'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'

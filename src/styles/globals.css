@@ -333,6 +333,18 @@ body {
     background-repeat: "no-repeat";
     opacity: 1;
   }
+
+  .layered-paper-bg {
+    background-image: url('/src/assets/backgrounds/white-paper.png'), url('/src/assets/backgrounds/pink-checkered-paper.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%, 90% 90%;
+  }
+
+  @media (min-width: theme(screens.md)) {
+    .layered-paper-bg {
+      background-size: 98% 98%, 100% 100%;
+    }
+  }
 }
 
 .nav-link {

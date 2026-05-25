@@ -1,9 +1,9 @@
+import { useNavigate } from 'react-router-dom'
+
 import ProjectCard from '../components/ProjectCard'
 import { projects, skills } from '../data/content'
 import { socials } from '../data/social'
-import PhotoSection from '../components/PhotoSection'
-import Bio from '../components/Bio'
-import StickerSection from '../components/StickerSection'
+
 import { Button } from '../components/Button'
 import { SocialIcon } from '../components/SocialIcon'
 import Sticker from '../components/Sticker'
@@ -13,21 +13,33 @@ import PURPLE_WASHI from '../assets/doodles-stickers/purple-washi-tape.png'
 import DARK_PINK_PAPER from '../assets/backgrounds/dark-pink-paper.png'
 import TAMAGOTCHI_STICKER from '../assets/doodles-stickers/tamagotchi.png'
 import TAPE from '../assets/doodles-stickers/masking-tape.png'
+import { AboutSection } from '../components/AboutSection'
+import { BulletList } from '../components/BulletList'
 
 export default function Home() {
+  const navigate = useNavigate()
+
   return (
     <main className="">
 
       {/* ── About Section ─────────────────────────────────── */}
-      <section id="about" className="flex flex-col lg:flex-row">
-        <div className="flex-1 xl:flex-1 flex justify-center items-center">
-          <PhotoSection />
-        </div>
-        <div className="flex-1 xl:flex-2"><Bio skills={skills} /></div>
-        <div className="hidden xl:flex-1 xl:inline-flex relative">
-          <StickerSection />
-        </div>
-      </section>
+      <AboutSection
+        bulletList={
+          <BulletList
+            title="Top Skills"
+            items={skills}
+            borderColor="#FF2D9B"
+          />}
+        bioText={
+          <>
+            <p className="font-mono text-ink leading-relaxed">
+              Hi! I'm <span className="highlight-yellow">Jessica</span> - a frontend developer who loves building clean, thoughtful, and functional user experiences with a touch of personality. As a proud 90's kid, I’m drawn to cozy nostalgia and enjoy sprinkling my own creative flavor into the things I make (this website included 😉).
+            </p>
+            <p className="font-mono text-ink leading-relaxed">
+              Outside of coding, I’m a mama to three tiny humans who keep life wonderfully chaotic. When I manage to sneak in some time alone, I’m usually <span className="squiggle font-semibold text-neon-pink squiggle-pink">reading</span>, <span className="squiggle font-semibold text-retro-lilac squiggle-lilac">journaling</span>, <span className="squiggle font-semibold text-retro-green squiggle-green">crafting</span>, or finding new hobbies to keep my creative juices flowing.
+            </p>
+          </>
+        } />
 
       {/* ── Washi divider ─────────────────────────────────── */}
       <img
@@ -50,7 +62,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center my-4">
-          <Button label="view all projects" onClick={() => alert('This will link to the full projects page!')} />
+          <Button label="view all projects →" onClick={() => navigate('/work')} />
         </div>
       </section>
 

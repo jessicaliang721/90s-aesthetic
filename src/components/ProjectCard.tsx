@@ -7,7 +7,6 @@ interface ProjectCardProps {
     description: string
     tags: string[]
     bgColor: string
-    accentColor: string
     href: string
     screenshot?: string
     bg?: string
@@ -17,7 +16,6 @@ interface ProjectCardProps {
 export default function ProjectCard({
     title,
     description,
-    accentColor,
     href,
     screenshot,
     bg
