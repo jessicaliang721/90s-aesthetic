@@ -5,7 +5,7 @@ import { useState } from 'react'
 // import './styles/globals.css'
 import Home from './pages/Home'
 import Navigation from './components/Navigation'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 import About from './pages/About'
 import Work from './pages/Work'
 import Experience from './pages/Experience'
@@ -25,7 +25,7 @@ function App() {
               <Route path="/experience" element={<Experience />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-            {/* <Footer /> */}
+            <Footer />
           </BrowserRouter>
         </div>
       </div>

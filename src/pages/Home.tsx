@@ -63,11 +63,12 @@ export default function Home() {
       />
 
       {/* ── Socials Section ────────────────────────────────── */}
-      <section id="socials" className="mb-12 max-w-7xl mx-auto px-4">
+      <section id="socials" className="max-w-7xl mx-auto px-4">
         <div className="text-center">
           <h2 className="header-highlight header-highlight-green tracking-wider hand-underline hand-underline-lilac text-3xl mb-6 -rotate-1">let's connect!</h2>
         </div>
         <div className="flex justify-center items-center">
+          {/* Dark pink note */}
           <div
             className="hidden md:flex-1 md:inline-flex justify-center items-center drop-shadow-lg m-10 -rotate-10"
             style={{
@@ -86,7 +87,9 @@ export default function Home() {
               Thanks for stopping by! Let's build something cool together. ✿
             </p>
           </div>
-          <div className="flex md:flex-2 justify-center gap-12 sm:gap-6 xl:gap-8">
+
+          {/* Social Icons */}
+          <div className="flex md:flex-2 justify-center gap-12 sm:gap-6 lg:gap-8 xl:gap-12">
             {socials.map((item) => {
               const { label, icon, href, highlightColor } = item
               return (
@@ -94,6 +97,8 @@ export default function Home() {
               )
             })}
           </div>
+
+          {/* Tamagotchi Sticker */}
           <div className="hidden md:flex-1 md:inline-flex justify-center">
             <Sticker imageSrc={TAMAGOTCHI_STICKER} float={true} customClasses="w-30 md:w-35 lg:w-40" />
           </div>
