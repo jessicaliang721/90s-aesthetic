@@ -1,10 +1,15 @@
 import { AboutSection } from "../components/AboutSection";
 import { BulletList } from "../components/BulletList";
+import { CTASection } from "../components/CTASection";
+import { SocialIcons } from "../components/SocialIcons";
 import { YTSection } from "../components/YTSection";
+
+import TAMAGOTCHI_STICKER from '../assets/doodles-stickers/tamagotchi.png'
+import Sticker from "../components/Sticker";
 
 export default function About() {
   return (
-    <main className="px-6 py-12">
+    <main className="">
       {/* ── About Section ─────────────────────────────────── */}
       <AboutSection
         bioText={
@@ -34,6 +39,20 @@ export default function About() {
       />
       {/* ── YouTube Section ─────────────────────────────────── */}
       <YTSection />
+
+      {/* ── Socials Section ────────────────────────────────── */}
+      <CTASection
+        headerHighlightColor="yellow"
+        handUnderlineColor="pink"
+        note="⋆˙⟡ Reach out if you want to be friends! ˚⟡˖ ࣪"
+        middle={
+          <SocialIcons />
+        }
+        title="let's connect!"
+        sticker={
+          <Sticker imageSrc={TAMAGOTCHI_STICKER} float={true} customClasses="w-30 md:w-35 lg:w-40" />
+        }
+      />
     </main>
   )
 }

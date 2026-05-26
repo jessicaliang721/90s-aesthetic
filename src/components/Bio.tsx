@@ -12,21 +12,6 @@ const Bio = ({ bulletList, bioText }: BioProps) => {
             {bioText}
 
             {/* Bullet list */}
-            {/* {list && skills.length > 0 && (
-                <div className="w-fit border-4 border-retro-pink rounded-lg p-4 border-dashed">
-                    <h3 className="text-center text-xl tracking-wider hand-underline hand-underline-lilac mb-6">Top Skills</h3>
-                    <ul className="space-y-1">
-                        {skills.map((skill, index) => (
-                            <li
-                                key={skill}
-                                className={`font-handwrite star-bullet text-ink tracking-wider ${bulletColors[index % bulletColors.length]}`}
-                            >
-                                {skill}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )} */}
             {bulletList && (
                 bulletList
             )}

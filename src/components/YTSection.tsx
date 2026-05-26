@@ -1,8 +1,6 @@
 import { useLatestVideo } from '../hooks/useLatestVideo'
 import { useChannelDetails } from '../hooks/useChannelDetails'
 import { socials } from '../data/social'
-import PINK_CHECKERED_PAPER from '../assets/backgrounds/pink-checkered-paper.png'
-import WHITE_PAPER from '../assets/backgrounds/white-paper.png'
 
 export const YTSection = () => {
     const { video, loading: latestVideoLoading, error: latestVideoError } = useLatestVideo()
@@ -17,7 +15,7 @@ export const YTSection = () => {
     return (
         <section
             id="youtube"
-            className="p-10 relative drop-shadow-lg layered-paper-bg"
+            className="p-10 relative drop-shadow-lg layered-paper-bg my-10"
         >
             {loading && (
                 <p className="font-handwrite text-ink/50 text-center py-8">
@@ -41,9 +39,9 @@ export const YTSection = () => {
                             </h2>
                         </div>
 
-                        <p className="font-mono text-lg tracking-tighter leading-relaxed"><span className="squiggle font-semibold text-retro-lilac squiggle-lilac">Cozy Hobby Time</span> {channel?.description}</p>
+                        <p className="font-mono text-lg tracking-tighter leading-relaxed">{channel?.description}</p>
 
-                        <h3 className="tracking-wider text-xl">my latest video:</h3>
+                        <h3 className="tracking-wider text-xl squiggle squiggle-pink inline-block">my latest video</h3>
                         <p className="font-body text-md text-ink/70 leading-relaxed line-clamp-4">
                             {video.description}
                         </p>

@@ -21,7 +21,7 @@ export default function ProjectCard({
     bg
 }: ProjectCardProps) {
     return (
-        <div className="flex flex-col w-[300px]">
+        <div className="flex flex-col w-75">
             <Link
                 to={href}
                 key={title}
@@ -59,7 +59,7 @@ export default function ProjectCard({
             </Link>
 
             {/* Description and Link */}
-            <div className="mt-2 px-2 flex flex-col items-start gap-2">
+            <div className="mt-2 px-4 flex flex-col items-start gap-2">
                 <p className="text-medium text-ink/80 mb-2">{description}</p>
                 <Link
                     to={href}

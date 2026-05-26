@@ -14,6 +14,7 @@ export const projects = [
     href: '#',
     bg: PINK_NOTE_PAPER,
     screenshot: PLACEHOLDER_SCREENSHOT,
+    category: 'web sites',
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ export const projects = [
     href: '#',
     bg: YELLOW_NOTE_PAPER,
     screenshot: PLACEHOLDER_SCREENSHOT,
+    category: 'tools',
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const projects = [
     href: '#',
     bg: GREEN_NOTE_PAPER,
     screenshot: PLACEHOLDER_SCREENSHOT,
+    category: 'web apps',
   },
 ]
 

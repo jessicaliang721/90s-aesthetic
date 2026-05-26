@@ -213,7 +213,7 @@ body {
 }
 
 .header-highlight-yellow::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' preserveAspectRatio='none'%3E%3Cpath d='M4 10 C10 6 18 4 30 5 C60 3 90 2 120 4 C150 3 175 5 196 8 C198 14 199 20 197 28 C190 32 178 35 160 36 C130 38 90 38 55 37 C30 36 12 34 4 30 C2 24 2 16 4 10 Z' fill='%23FFE600' opacity='0.82'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' preserveAspectRatio='none'%3E%3Cpath d='M4 10 C10 6 18 4 30 5 C60 3 90 2 120 4 C150 3 175 5 196 8 C198 14 199 20 197 28 C190 32 178 35 160 36 C130 38 90 38 55 37 C30 36 12 34 4 30 C2 24 2 16 4 10 Z' fill='%23f7db5b' opacity='0.82'/%3E%3C/svg%3E");
 }
 
 .header-highlight-lilac::before {
@@ -337,12 +337,61 @@ body {
   .layered-paper-bg {
     background-image: url('/src/assets/backgrounds/white-paper.png'), url('/src/assets/backgrounds/pink-checkered-paper.png');
     background-repeat: no-repeat, no-repeat;
-    background-size: 100% 100%, 90% 90%;
+    background-size: 100% 100%, 100% 100%;
   }
 
-  @media (min-width: theme(screens.md)) {
+  .filter-bar-bg {
+    background-image: url('/src/assets/backgrounds/pink-washi-flowers.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 40px;
+  }
+
+  .cta-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .filter-active {
+    position: relative;
+    display: inline-block;
+  }
+
+  .filter-active::before {
+    content: '';
+    position: absolute;
+    inset: -4px -6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 50' preserveAspectRatio='none'%3E%3Cpath d='M10 15 C30 5 80 3 100 5 C130 3 170 6 190 15 C195 22 195 30 190 38 C170 46 130 48 100 46 C70 48 30 45 10 38 C4 30 4 22 10 15 Z' fill='none' stroke='%23FF2D9B' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
+
+  @media (min-width: 768px) {
     .layered-paper-bg {
       background-size: 98% 98%, 100% 100%;
+    }
+
+    .filter-bar-bg {
+      min-height: 45px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .cta-bg {
+      background-size: 100% 90%;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .filter-bar-bg {
+      background-size: 90%;
+      background-position: center;
+    }
+
+    .cta-bg {
+      background-size: contain;
     }
   }
 }
