@@ -1,15 +1,5 @@
 import ProjectCard from './ProjectCard'
-
-interface Project {
-  id: number
-  title: string
-  description: string
-  tags: string[]
-  bgColor: string
-  href: string
-  screenshot?: string
-  category?: string
-}
+import type { Project } from '../types/project'
 
 interface ProjectsGridProps {
     projects: Project[]
@@ -18,9 +8,16 @@ interface ProjectsGridProps {
 export const ProjectsGrid = ({ projects }: ProjectsGridProps) => {
     return (
         <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto py-4 lg:px-3">
-            {projects.map((project) => {
+            {projects.map((project, index) => {
                 return (
-                    <ProjectCard key={project.id} {...project} />
+                    <ProjectCard
+                        key={project.id}
+                        index={index}
+                        slug={project.slug}
+                        title={project.title}
+                        screenshot={project.screenshot}
+                        description={project.description}
+                    />
                 )
 
             })}

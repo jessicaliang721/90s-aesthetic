@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { FilterBar } from '../components/FilterBar'
-import { projects } from '../data/content'
 import { ProjectsGrid } from '../components/ProjectsGrid'
 import { CTASection } from '../components/CTASection'
 import { Button } from '../components/Button'
@@ -11,15 +10,22 @@ import Sticker from "../components/Sticker";
 import GRID_PAPER from '../assets/backgrounds/grid-paper.png'
 import PINK_HEART_DOODLE from '../assets/doodles-stickers/pink-heart-doodle-unfilled.png'
 import GREEN_STAR_DOODLE from '../assets/doodles-stickers/green-star-doodle.png'
+import { useProjects } from '../hooks/useProjects'
 
 
 export default function Work() {
   const [activeFilter, setActiveFilter] = useState('all')
+  const { projects, loading, error } = useProjects();
+
   const navigate = useNavigate()
 
-  const filtered = activeFilter === 'all'
-    ? projects
-    : projects.filter(p => p.category === activeFilter)
+  const filtered =
+    activeFilter === 'all'
+      ? projects
+      : projects.filter(p => p.category.includes(activeFilter))
+
+  if (loading) return <p>loading...</p>
+  if (error) return <p>failed to load projects</p>
 
   return (
     <main className="">

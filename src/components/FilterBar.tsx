@@ -4,7 +4,7 @@ interface FilterBarProps {
 }
 
 export const FilterBar = ({ active, onChange }: FilterBarProps) => {
-    const projectFilters = ['all', 'web apps', 'web sites', 'tools']
+    const projectFilters = ['all', 'web app', 'website', 'tools']
 
     return (
         <div

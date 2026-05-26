@@ -35,7 +35,7 @@ export const YTSection = () => {
                     <div className="lg:w-1/3 space-y-4">
                         <div className="text-center mb-8">
                             <h2 className="header-highlight header-highlight-pink tracking-wider text-3xl -rotate-1 inline-block hand-underline hand-underline-yellow">
-                                my youtube ♡
+                                my youtube ⏯
                             </h2>
                         </div>
 

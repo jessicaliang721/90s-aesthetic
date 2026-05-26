@@ -2,7 +2,7 @@ import Sticker from './Sticker'
 
 import TAPE_SRC from '../assets/doodles-stickers/pink-tape-small.png'
 import BG_IMG from '../assets/backgrounds/yellow-scrap-paper.png'
-import PHOTO_URL from '../assets/IMG_5201.jpg'
+import PHOTO_URL from '../assets/prof-pic.jpg'
 import GREEN_SMILEY from '../assets/doodles-stickers/green-smiley-sticker.png'
 import PINK_HEART from '../assets/doodles-stickers/pink-heart-sticker.png'
 

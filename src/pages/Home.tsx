@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { projects, skills } from '../data/content'
+import { skills } from '../data/content'
+import { projects } from '../data/projects'
 
 import { Button } from '../components/Button'
 import Sticker from "../components/Sticker";
