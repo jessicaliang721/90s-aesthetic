@@ -8,4 +8,6 @@ export interface GitHubRepo {
   language: string
   stargazers_count: number
   pushed_at: string
+  has_pages: boolean
+  social_preview_url: string
 }

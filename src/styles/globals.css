@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cutive+Mono&family=Indie+Flower&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 @theme {
   --color-neon-pink: #f268a9;
   --color-neon-yellow: #f7db5b;
@@ -190,7 +192,6 @@ body {
 
 /* H1 */
 .header-highlight {
-  font-family: var(--font-display);
   padding: 8px 20px;
   display: inline-block;
 }
@@ -366,6 +367,17 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     pointer-events: none;
+  }
+
+  .prose pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+  }
+
+  .prose code {
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 
   @media (min-width: 768px) {

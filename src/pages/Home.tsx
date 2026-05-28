@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import { skills } from '../data/content'
-import { projects } from '../data/projects'
 
 import { Button } from '../components/Button'
 import Sticker from "../components/Sticker";
@@ -15,8 +14,12 @@ import { CTASection } from '../components/CTASection'
 import { ProjectsGrid } from '../components/ProjectsGrid'
 import { SocialIcons } from '../components/SocialIcons'
 
+import { useProjects } from '../hooks/useProjects'
+
 export default function Home() {
   const navigate = useNavigate()
+   const { projects, loading, error } = useProjects();
+   const featuredProjects = projects.filter(project => project.featured).slice(0, 3)
 
   return (
     <main className="">
@@ -55,7 +58,7 @@ export default function Home() {
         </div>
 
         {/* TODO: add only featured projects on home page */}
-        <ProjectsGrid projects={projects} />
+        <ProjectsGrid projects={featuredProjects} loading={loading} error={error} />
 
         <div className="flex justify-center my-4">
           <Button label="view all projects →" onClick={() => navigate('/work')} />

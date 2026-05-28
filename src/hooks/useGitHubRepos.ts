@@ -4,13 +4,13 @@ import { GITHUB_USERNAME } from '../constants/github'
 
 import type { GitHubRepo } from '../types/github'
 
+import { githubHeaders  } from '../constants/github'
+
 const fetchPortfolioRepos = async (): Promise<GitHubRepo[]> => {
   const res = await fetch(
     `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
     {
-      headers: {
-        Accept: 'application/vnd.github.v3+json',
-      }
+      headers: githubHeaders
     }
   )
   if (!res.ok) throw new Error('Failed to fetch repos')

@@ -29,7 +29,7 @@ export default function ProjectCard({
     return (
         <div className="flex flex-col w-75">
             <Link
-                to={slug}
+                to={`/work/${slug}`}
                 key={title}
                 className="project-card relative pt-8 drop-shadow-lg"
                 style={{
@@ -68,7 +68,7 @@ export default function ProjectCard({
             <div className="mt-2 px-4 flex flex-col items-start gap-2">
                 <p className="text-medium text-ink/80 mb-2">{description}</p>
                 <Link
-                    to={slug}
+                    to={`/work/${slug}`}
                     className="text-medium font-handwrite text-(--pink) text- font-bold tracking-wider hand-underline hand-underline-yellow hand-underline-link"
                 >
                     view project →

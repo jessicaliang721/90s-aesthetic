@@ -24,9 +24,6 @@ export default function Work() {
       ? projects
       : projects.filter(p => p.category.includes(activeFilter))
 
-  if (loading) return <p>loading...</p>
-  if (error) return <p>failed to load projects</p>
-
   return (
     <main className="">
       <div className="mb-2 md:mb-4 text-center max-w-6xl mx-auto">
@@ -36,7 +33,7 @@ export default function Work() {
 
       <FilterBar active={activeFilter} onChange={setActiveFilter} />
 
-      <ProjectsGrid projects={filtered} />
+      <ProjectsGrid projects={filtered} loading={loading} error={error} />
 
       {filtered.length === 0 && (
         <p className="font-handwrite text-center text-ink/50 mt-12 text-lg">
