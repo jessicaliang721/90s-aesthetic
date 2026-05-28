@@ -30,7 +30,7 @@ export function transformRepo(
         description: repo.description,
         longDescription: readme ?? undefined,
         githubHref: repo.html_url,
-        screenshot: screenshot,
+        screenshots: { desktop: screenshot },
         category: categories[0] ?? 'other',
         featured,
         date: repo.pushed_at,

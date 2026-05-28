@@ -18,7 +18,7 @@ export const ContentCard = ({ title, children, bg, bgColor }: ContentCardProps) 
 
   return (
     <section
-      className="px-8 py-8 rounded-sm drop-shadow-md"
+      className="px-8 py-8 rounded-lg drop-shadow-md"
       style={backgroundStyle}
     >
       <h2 className="font-display text-3xl text-ink mb-6 flex items-center gap-3">

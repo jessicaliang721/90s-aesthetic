@@ -1,10 +1,15 @@
+export interface Screenshot {
+  desktop?: string
+  mobile?: string
+}
+
 export interface Project {
   id: string | number
   title: string
   description: string
   longDescription?: string
   href?: string
-  screenshot?: string
+  screenshots?: Screenshot
   category: string
   slug: string
   date: string
