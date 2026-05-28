@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <title>Jessica Liang</title>
     <script>
       const path = window.location.pathname.replace('/90s-aesthetic', '');
-      sessionStorage.setItem('redirect', path);
+      sessionStorage.setItem('redirect', path || '/');
       window.location.replace('/90s-aesthetic/');
     </script>
   </head>
+  <body></body>
 </html>
