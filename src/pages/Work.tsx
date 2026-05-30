@@ -27,7 +27,7 @@ export default function Work() {
   return (
     <main className="">
       <div className="mb-2 md:mb-4 text-center max-w-6xl mx-auto">
-        <h2 className="header-highlight header-highlight-lilac tracking-wider hand-underline hand-underline-pink text-3xl mb-8 -rotate-3">my work</h2>
+        <h1 className="header-highlight header-highlight-lilac tracking-wider hand-underline hand-underline-pink text-3xl mb-8 rotate-3">my work</h1>
         <p className="font-mono leading-relaxed text-lg px-2">Here’s a sample of the work I’ve created over the years — both professionally and personally. I love creating web experiences that balance function and aesthetics: things that <span className="squiggle font-semibold text-retro-green squiggle-green">work well</span>, <span className="squiggle font-semibold text-neon-pink squiggle-pink">look good</span>, and <span className="squiggle font-semibold text-retro-lilac squiggle-lilac">feel enjoyable</span> to use. I’m also not above creating a tool for myself whenever I spot a problem that needs solving!</p>
       </div>
 
