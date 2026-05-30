@@ -175,13 +175,24 @@ body {
 .highlight-yellow {
   background: rgba(255, 233, 39, 0.45);
   border-radius: 0.35rem;
-  padding: 0.125rem 0.35rem;
+
+  padding: 0.05rem 0.4rem;
+
+  display: inline;
+  line-height: 1.8;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .highlight-pink {
   background: rgba(242, 104, 169, 0.25);
   border-radius: 0.35rem;
   padding: 0.125rem 0.35rem;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  display: inline;
 }
 
 .highlight-green {

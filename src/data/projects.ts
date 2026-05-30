@@ -10,6 +10,7 @@ export const projects: Project[] = [
     category: 'e-commerce',
     screenshots: {
       desktop: PLACEHOLDER_SCREENSHOT,
+      mobile: PLACEHOLDER_SCREENSHOT
     },
     href: 'https://goodenergyclub.com',
     date: 'Oct 2024',
@@ -18,6 +19,8 @@ export const projects: Project[] = [
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec aliquet mi.</p>
       <p>Etiam id tortor et neque venenatis pulvinar. Maecenas tristique pulvinar sagittis.</p>
     `,
+    techStack: ["JavaScript", "TypeScript", "CSS", "React"],
+    impact: ["lowered cost", "improved customer happiness", "reduced maintenance"]
   },
 
   {

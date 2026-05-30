@@ -21,67 +21,115 @@ export default function ProjectDetail() {
         </main>
     )
 
-    const { longDescription } = project;
+    const { longDescription, techStack, impact } = project;
+
+    const TECH_ICONS: Record<string, { icon: string; color: string }> = {
+        'HTML5': { icon: '🌐', color: '#E34F26' },
+        'CSS3': { icon: '🎨', color: '#1572B6' },
+        'JavaScript': { icon: '𝙅𝙎', color: '#F7DF1E' },
+        'TypeScript': { icon: '𝙏𝙎', color: '#3178C6' },
+        'React': { icon: '⚛️', color: '#61DAFB' },
+        'Tailwind CSS': { icon: '💨', color: '#06B6D4' },
+        'Framer Motion': { icon: '🟣', color: '#BB4FFF' },
+        'Next.js': { icon: '▲', color: '#000000' },
+        'Netlify': { icon: '🌿', color: '#00C7B7' },
+        'GitHub': { icon: '🐙', color: '#181717' },
+        'Figma': { icon: '🎭', color: '#F24E1E' },
+        'Sass': { icon: '💅', color: '#CC6699' },
+        'Node.js': { icon: '🟢', color: '#339933' },
+    }
 
     return (
-        <main className="px-6 py-12">
+        <main className="px-6">
+            {/* Hero section */}
             <ProjectHero project={project} />
+
+            {/* About project */}
             {longDescription && (
                 <ContentCard title="about the project" bgColor="#feefee">
                     <div
-                        className="prose prose-sm font-body text-ink mt-8 whitespace-normal wrap-anywhere max-w-none"
+                        className="prose prose-sm font-body text-lg text-ink mt-8 whitespace-normal wrap-anywhere max-w-none"
                         dangerouslySetInnerHTML={{ __html: longDescription }}
                     />
                 </ContentCard>
             )}
 
-            <ContentCard title="screenshots" bgColor="#f4ebf8">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {project.screenshots?.desktop && (
-                        <div className="flex flex-col items-center gap-2">
-                            <a
-                                href={project.screenshots.desktop}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="block w-full rounded-lg overflow-hidden border-2 border-ink drop-shadow-md transition-transform hover:scale-[1.02] hover:-rotate-1"
-                            >
-                                <img
-                                    src={project.screenshots.desktop}
-                                    alt={`${project.title} desktop screenshot`}
-                                    className="w-full object-cover object-top"
-                                    style={{ height: '160px' }}
-                                />
-                            </a>
+            {/* Impact & Tech Stack */}
+            <ContentCard bgColor='#f2f1df'>
+                <div className="flex flex-col lg:flex-row gap-10">
+                    {/* Impact */}
+                    <div className="lg:w-1/2 space-y-4">
+                        <h2 className="font-display text-3xl text-ink flex items-center gap-3">
+                            impact <span className="text-xl">💻</span>
+                        </h2>
 
-                            <span className="font-handwrite text-sm text-ink/60">
-                                desktop
-                            </span>
+                        <ul className="space-y-3">
+                            {impact?.map((item, i) => (
+                                <li key={i} className="font-mono font-bold text-lg text-ink/80 flex items-start gap-3">
+                                    <span className="shrink-0 w-5 h-5 rounded-full border-2 border-retro-green flex items-center justify-center mt-0.5">
+                                        <span className="text-retro-green text-md">✓</span>
+                                    </span>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Divider — vertical on lg, horizontal on mobile */}
+                    <div className="hidden lg:block w-px bg-ink/10 self-stretch" />
+                    <div className="block lg:hidden h-px bg-ink/10 w-full" />
+
+                    {/* Tech stack */}
+                    <div className="lg:w-1/2 space-y-4">
+                        <h2 className="font-display text-3xl text-ink flex items-center gap-3">
+                            tech stack <span className="font-mono text-xl">&lt;/&gt;</span>
+                        </h2>
+
+                        <div className="flex flex-wrap gap-2">
+                            {techStack?.map((tech) => {
+                                const meta = TECH_ICONS[tech]
+                                return (
+                                    <div
+                                        key={tech}
+                                        className="flex items-center gap-2 px-3 py-2 border-2 rounded-lg bg-paper"
+                                        style={{ borderColor: meta?.color ?? '#FFB3D9' }}
+                                    >
+                                        <span className="text-base leading-none">{meta?.icon ?? '🔧'}</span>
+                                        <span className="font-mono text-lg text-ink">{tech}</span>
+                                    </div>
+                                )
+                            })}
                         </div>
-                    )}
+                    </div>
 
-                    {project.screenshots?.mobile && (
-                        <div className="flex flex-col items-center gap-2">
-                            <a
-                                href={project.screenshots.mobile}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="block w-full rounded-lg overflow-hidden border-2 border-ink drop-shadow-md transition-transform hover:scale-[1.02] hover:-rotate-1"
-                            >
-                                <img
-                                    src={project.screenshots.mobile}
-                                    alt={`${project.title} mobile screenshot`}
-                                    className="w-full object-cover object-top"
-                                    style={{ height: '160px' }}
-                                />
-                            </a>
-
-                            <span className="font-handwrite text-sm text-ink/60">
-                                mobile
-                            </span>
-                        </div>
-                    )}
                 </div>
             </ContentCard>
+
+            {/* Screenshot section */}
+            {project.screenshots && Object.keys(project.screenshots).length > 0 && (
+                <ContentCard title="screenshots 📷" bgColor="#f4ebf8">
+                    <div className={`grid grid-cols-1 md:grid-cols-${Object.keys(project.screenshots).length} gap-4`}>
+                        {Object.entries(project.screenshots).map(([label, url]) => (
+                            <div key={label} className="flex flex-col items-center gap-2 max-w-2xl">
+                                <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="block w-full rounded-lg overflow-hidden border-2 border-ink drop-shadow-md transition-transform hover:scale-[1.02] hover:-rotate-1"
+                                >
+                                    <img
+                                        src={url}
+                                        alt={`${project.title} ${label} screenshot`}
+                                        className="w-full object-cover object-top"
+                                    />
+                                </a>
+                                <span className="font-handwrite text-lg tracking-wider font-extrabold text-ink/60">{label}</span>
+                            </div>
+                        ))}
+                    </div>
+                </ContentCard>
+            )}
+
         </main >
     )
 }

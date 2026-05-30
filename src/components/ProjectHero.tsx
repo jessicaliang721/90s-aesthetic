@@ -21,7 +21,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
 
             <div className="flex flex-col lg:flex-row items-center gap-8">
 
-                {/* Left — title + description + links */}
+                {/* Left */}
                 <div className="lg:w-2/5 space-y-6 relative z-10 -rotate-3">
 
                     {/* Title with dashes */}
@@ -43,14 +43,17 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                         </svg>
                     </div>
 
-                    {/* Description pill */}
+                    {/* Short Description */}
                     {description && (
                         <div className="flex justify-center">
-                            <div className="highlight-pink font-handwrite text-sm font-bold px-4 py-1 rounded-sm relative text-center">
+                            <div className="highlight-yellow font-handwrite text-lg font-bold rounded-sm relative text-center tracking-wider">
                                 {description}
                             </div>
                         </div>
                     )}
+
+                    {/* Date built */}
+                    {/* TODO: add this */}
 
                     {/* Action buttons */}
                     <div className="flex gap-4 flex-wrap justify-center">
@@ -59,7 +62,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                                 href={href}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-2 font-handwrite text-sm font-bold px-4 py-2 border-2 border-ink rounded-sm hover:bg-ink hover:text-paper transition-colors"
+                                className="flex items-center gap-2 font-handwrite text-md font-bold px-4 py-2 border-2 border-ink rounded-sm hover:bg-ink hover:text-paper transition-colors"
                             >
                                 live site <span className="text-xs">↗</span>
                             </a>
@@ -69,7 +72,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                                 href={githubHref}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-2 font-handwrite text-sm font-bold px-4 py-2 border-2 border-ink rounded-sm hover:bg-ink hover:text-paper transition-colors"
+                                className="flex items-center gap-2 font-handwrite text-md font-bold px-4 py-2 border-2 border-ink rounded-sm hover:bg-ink hover:text-paper transition-colors"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
@@ -81,10 +84,9 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                 </div>
 
                 {/* Right — device mockups */}
-                <div className="lg:w-3/5 relative flex items-end justify-center">
-
+                <div className="w-full lg:w-3/5 relative flex items-end justify-center">
                     {/* Desktop mockup */}
-                    <div className="relative w-full max-w-lg">
+                    <div className="relative w-full">
                         <div className="bg-white rounded-t-lg border-2 border-b-0 border-ink px-3 py-2 flex items-center gap-1.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-retro-pink border border-ink/20" />
                             <span className="w-2.5 h-2.5 rounded-full bg-neon-yellow border border-ink/20" />
@@ -96,12 +98,10 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                                 ? <img
                                     src={screenshots.desktop}
                                     alt={`${title} desktop screenshot`}
-                                    className="w-full object-cover object-top"
-                                    style={{ maxHeight: '280px' }}
+                                    className="w-full object-cover object-top max-h-87.5"
                                 />
                                 : <div
-                                    className="w-full flex items-center justify-center bg-retro-pink/20"
-                                    style={{ height: '280px' }}
+                                    className="w-full flex items-center justify-center bg-retro-pink/20 max-h-87.5"
                                 >
                                     <span className="font-display text-2xl text-ink/30">{title}</span>
                                 </div>
@@ -111,7 +111,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
 
                     {/* Mobile mockup */}
                     {screenshots?.mobile && (
-                        <div className="absolute -bottom-4 -right-2 w-24 border-2 border-ink rounded-xl overflow-hidden bg-white rotate-[3deg] drop-shadow-lg">
+                        <div className="absolute -bottom-4 -right-2 w-24 border-2 border-ink rounded-xl overflow-hidden bg-white rotate-3 drop-shadow-lg">
                             <div className="bg-ink h-3 flex items-center justify-center">
                                 <div className="w-8 h-1.5 bg-ink/60 rounded-full" />
                             </div>
@@ -119,12 +119,11 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                                 src={screenshots.mobile}
                                 alt={`${title} mobile screenshot`}
                                 className="w-full object-cover object-top"
-                                style={{ maxHeight: '160px' }}
+                                style={{ maxHeight: '200px' }}
                             />
                         </div>
                     )}
                 </div>
-
             </div>
         </section>
     )
